@@ -9,10 +9,13 @@ namespace Akasztófa
         static string secret_word = "";
         static string shownwordNew;
         static string shownword = "";
+        
 
         static void Main(string[] args)
         {
-            string[] szavak = { "alma" };
+            string[] szavak = { "alma", "körte", "csengő", "bálna", "kuka", "zebra", "lézer", "rakéta"};
+            var szamok = new[] { "1", "2", "3", "4", "5", "6", "7", "8", "9" };
+            var leirtbetuk = "";
             Random rnd = new Random();
             secret_word = szavak[rnd.Next(szavak.Length)];
 
@@ -23,14 +26,25 @@ namespace Akasztófa
 
             shownwordNew = shownword;
 
+            Console.WriteLine($"Üdvözöllek az akasztófa játékban!!!");
+            Console.Title = "Akasztófa játék";
             do
             {
+                if (leirtbetuk == "")
+                {
+                    ;
+                }
+                else
+                {
+                    Console.WriteLine($"Leírt betűk: {leirtbetuk}" );
+                }
                 Console.WriteLine("Adj meg egy betűt:");
                 char betu = Convert.ToChar(Console.ReadLine());
 
                 if (secret_word.Contains(betu))
                 {
                     shownwordNew = "";
+                    leirtbetuk += betu + " ";
 
                     for (int i = 0; i < secret_word.Length; i++)
                     {
@@ -45,14 +59,24 @@ namespace Akasztófa
                     }
 
                     shownword = shownwordNew; // Frissítjük a jelenlegi állapotot
-
+                    Console.Clear();
                     Console.WriteLine($"A(z) '{betu}' benne van a titkos szóban, még {Healthpoint} életed van.");
                     Console.WriteLine("Aktuális állapot: " + shownword);
                 }
                 else
                 {
                     Healthpoint--;
-                    Console.WriteLine($"Ez a betű nincs benne a szóban! Már csak {Healthpoint} életed van.");
+                    Console.Clear();
+                    if (szamok.Contains(Convert.ToString(betu)))
+                    {
+                        Console.WriteLine($"Számot nem adhatsz meg!  Már csak {Healthpoint} életed van.");
+                        leirtbetuk += betu + " ";
+                    }
+                    else
+                    {
+                        Console.WriteLine($"Ez a betű nincs benne a szóban! Már csak {Healthpoint} életed van.");
+                        leirtbetuk += betu + " ";
+                    }
                     Console.WriteLine("Aktuális állapot: " + shownword);
                 }
 
