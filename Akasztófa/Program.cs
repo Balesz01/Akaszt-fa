@@ -14,7 +14,7 @@ namespace Akasztófa
         static void Main(string[] args)
         {
             string[] szavak = { "alma", "körte", "csengő", "bálna", "kuka", "zebra", "lézer", "rakéta"};
-            var szamok = new[] { "1", "2", "3", "4", "5", "6", "7", "8", "9" };
+            var szamok = new[] { "1", "2", "3", "4", "5", "6", "7", "8", "9", "0" };
             var leirtbetuk = "";
             Random rnd = new Random();
             secret_word = szavak[rnd.Next(szavak.Length)];
