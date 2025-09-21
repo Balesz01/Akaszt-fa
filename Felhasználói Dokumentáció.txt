@@ -1,0 +1,10 @@
+az első sor ban üdvözli a felhasznált a játékban
+van egy title-je a konzolnak aminek a neve Akasztófa játék
+Kiírja az üdvözlés után hogy adjon meg egy betűt mert már a kitalálandó szó meg van adva a gépnek adva randomizálva 
+ne írjon számot Ne írjon nagy betűket mert azokat hibának veszi a játék
+kiírja ha eltalátad hogy mennyi az aktuális életed az aktuális kitalálási állaptotát a kitalálandó szónak szónak és az eddig leírt betűket 
+ne írd többször ugyan azt a betűt mert ha rossz akkor azt megint rossznak fogja tartani és elfog venni egy próbálkozást ha meg jó akkor meg teljesen mindegy 
+utána újra bekéri ezt addig amíg el nem éred a próbálkozásaid végét vagy ki nem találod a szavat ha kitaláltad azt fogja írni hogy:  Nyertél, kitaláltad a szót: (és a szavat)
+ha meg elfogyott a próbálkozásod akkor Vesztettél! A szó ez volt: (a szó amit ki kellet volna találni)
+alapvetően 10 élettel kezdesz 
+Jó játékot!

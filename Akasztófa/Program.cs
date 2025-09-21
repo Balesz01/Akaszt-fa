@@ -5,7 +5,7 @@ namespace Akasztófa
 {
     internal class Program
     {
-        static int Healthpoint = 17;
+        static int Healthpoint = 10;
         static string secret_word = "";
         static string shownwordNew;
         static string shownword = "";
@@ -61,7 +61,7 @@ namespace Akasztófa
                     shownword = shownwordNew; // Frissítjük a jelenlegi állapotot
                     Console.Clear();
                     Console.WriteLine($"A(z) '{betu}' benne van a titkos szóban, még {Healthpoint} életed van.");
-                    Console.WriteLine("Aktuális állapot: " + shownword);
+                    Console.WriteLine($"Aktuális állapot: {shownword}" );
                 }
                 else
                 {
@@ -77,12 +77,12 @@ namespace Akasztófa
                         Console.WriteLine($"Ez a betű nincs benne a szóban! Már csak {Healthpoint} életed van.");
                         leirtbetuk += betu + " ";
                     }
-                    Console.WriteLine("Aktuális állapot: " + shownword);
+                    Console.WriteLine($"Aktuális állapot: {shownword}" );
                 }
 
                 if (shownword == secret_word)
                 {
-                    Console.WriteLine("Nyertél, kitaláltad a szót: " + secret_word);
+                    Console.WriteLine($"Nyertél, kitaláltad a szót: {secret_word}");
                     break;
                 }
 
@@ -90,7 +90,7 @@ namespace Akasztófa
 
             if (Healthpoint == 0)
             {
-                Console.WriteLine("Vesztettél! A szó ez volt: " + secret_word);
+                Console.WriteLine($"Vesztettél! A szó ez volt: {secret_word}");
             }
         }
     }
