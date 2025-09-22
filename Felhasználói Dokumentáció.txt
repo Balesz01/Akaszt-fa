@@ -1,10 +1,19 @@
-az első sor ban üdvözli a felhasznált a játékban
-van egy title-je a konzolnak aminek a neve Akasztófa játék
-Kiírja az üdvözlés után hogy adjon meg egy betűt mert már a kitalálandó szó meg van adva a gépnek adva randomizálva 
-ne írjon számot Ne írjon nagy betűket mert azokat hibának veszi a játék
-kiírja ha eltalátad hogy mennyi az aktuális életed az aktuális kitalálási állaptotát a kitalálandó szónak szónak és az eddig leírt betűket 
-ne írd többször ugyan azt a betűt mert ha rossz akkor azt megint rossznak fogja tartani és elfog venni egy próbálkozást ha meg jó akkor meg teljesen mindegy 
-utána újra bekéri ezt addig amíg el nem éred a próbálkozásaid végét vagy ki nem találod a szavat ha kitaláltad azt fogja írni hogy:  Nyertél, kitaláltad a szót: (és a szavat)
-ha meg elfogyott a próbálkozásod akkor Vesztettél! A szó ez volt: (a szó amit ki kellet volna találni)
-alapvetően 10 élettel kezdesz 
-Jó játékot!
+Felhasználói utasítás – Akasztófa játék
+A program üdvözli a felhasználót a játékban
+A konzol title-je Akasztófa játék
+Indítás után a főmenü jelenik meg 3 opcióval Játék Kezdése Beállítások Kilépés
+Főmenüben a Játék Kezdése opcióval új játék indul véletlenszerűen kiválasztott titkos szóval
+A felhasználó 10 életet kap alapból
+A játék kiírja az üdvözlést és bekéri az első betűt
+Ne írjon számot vagy nagy betűt mert a játék hibának veszi
+A program kiírja ha eltalálta a betűt az aktuális életek számát a kitalálási állapotot és az eddig leírt betűket
+Ne írja többször ugyanazt a betűt mert ha rossz akkor elvesz egy próbálkozást ha jó akkor számít
+A program újra bekéri a betűt mindaddig amíg el nem fogy a próbálkozások száma vagy ki nem találja a szót
+Ha kitalálta a szót a program kiírja Nyertél kitaláltad a szót: (és a szó)
+Ha elfogytak a próbálkozások a program kiírja Vesztettél A szó ez volt: (a szó amit ki kellett volna találni)
+Főmenüben a Beállítások opcióval a felhasználó változtathatja a betű színt Fehér Sárga vagy Piros és a háttér színt Fekete Kék vagy Zöld
+Beállítások menüben a Vissza a főmenübe opcióval kiléphet a beállításokból
+Főmenüben a Kilépés opcióval a program megkérdezi biztos-e a kilépés i vagy h
+h betű esetén visszadob a főmenübe i betű esetén kilép a programból
+Minden fontos lépés előtt a konzolt kitörli a program Console.Clear
+Jó játékot

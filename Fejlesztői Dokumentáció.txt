@@ -1,28 +1,47 @@
-megadjuk az alapvető adatokat a játékhoz 
-próbálkozások száma 10 
+Fejlesztői dokumentáció – Akasztófa játék
+megadtuk az alapvető adatokat a játékhoz
+próbálkozások száma 10
 a kitalálandó szó még nincs megadva csak hogy string
-hozzá adunk egy shownwordNew változót is amit string ként helyeztünk el 
-és egy shownword változót is amit még szintén csak hozzáadtunk és string ként definiáltuk de még annak sincs érték adva
-
-csináltam egy szavak tömböt amiben elhelyztem a titkos szavakat amiket ki kell találni
-csináltam egy számo tömböt is amiben számokat adtam mge hogyha számkat adnának meg betűk helyett akkor adjon nekik ez alapján üzenetet
-létrehoztam még egy leírtbetuk változót is amiben még nem adtam meg adatot mert ha elsőnek elindul a játék akkor nem fogja ezért kiírni ott is hogy milyen betűket tippelt eddig
+hozzáadtunk egy shownwordNew változót amit stringként definiáltunk
+hozzáadtunk egy shownword változót amit szintén stringként definiáltunk de még nincs értéke
+csináltam egy szavak tömböt amiben elhelyeztem a titkos szavakat amiket ki kell találni
+csináltam egy számok tömböt is amiben számokat adtam meg hogyha számot adnának betű helyett akkor üzenetet adjon
+létrehoztam egy leirtbetuk változót amiben még nincs adat mert ha elsőnek indul a játék akkor nem ír ki semmit
 hozzáadtunk egy randomizálót
-a secretwordhöz hozzárendelünk egy szavat a szavak tömbből
-a shownwor höz hozzáadunk annyi _ jelet amennyi betűből áll a szó 
-a shownwrdNew egyenlőre ugyan az lesz mint a showword
-kiíratjuk hogy üdvözöljük a gameben
-csinálunk egy Akasztófa játék nevű titlet
-csinálunk egy ciklust nem irtajuk ki a leirtbetuket ha nincs benne karakter 
-ha meg van akkor kiirtjuk
+a secret\_word-hez hozzárendelünk egy szót a szavak tömbből
+a shownword-hoz hozzáadunk annyi \_ jelet amennyi betűs a szó
+a shownwordNew egyenlőre ugyan az lesz mint a shownword
+kiíratjuk hogy üdvözöljük a játékban
+csinálunk egy Akasztófa játék nevű title-t
+Játék logika
+csinálunk egy ciklust a játékhoz
+nem írjuk ki a leirtbetuk-et ha nincs benne karakter
+ha van benne betű kiírjuk
 bekérünk egy betűt
-a betu t character-é fotmázzuk hogyha a secretwordben benne van a betu akkor a shownwordNew-t alaphelyzet be rakjuk szóval "" 
-a leirtbetuk höz hozzáadjuk a betu t és egy szóközt
-létrehozunk egy for ciklust ami annyiszor játszódik le maximum ahány betűs a secret Word ha a secretword i-edik betűje = a betu vel amit írt a jáátékos akkor a shownword newhoz hozzád adja azt a betűt ha meg nem akkor a shownwordNew hoz a shownword i edik elemét adja hozzá  ami ha már egyszer eltalálta akkor azt is hozzá adhatja hogy a nem csak _ karakter adhat hozzá
-a shownword öt újra definiáljuk ezzel az új karakterekkel 
-a consolt kitöröljük ki írjuk hogy mennyi élete maradt és kiírja az aktuális állapotot hogy mit hol talált ki
-ha meg nem találta el akkor azt írja ki és hozzá adja a betűt a leirt betukhöz ami majd kiír neki köetkezőnek amikor bekér egy betűt hogy elkerülhessék azt hogy kétszer írja be ugyan azt a karaktert
-elvesz a játékostól egy életet és még ezek előtt megnézi hogy számot akar e begépelni kiírja hogy azt ne adjon meg és beírja még a számot is a leirt betukbe 
-ezután is kiírja az aktuális állapotát hogy mennyire találták ki a titkos szavat
-ha a shownword megegyezik a secretword el akkor kitalálta és ezt ki is írja neki 
-ha meg a próbálkozásai fogytak el akkor meg azt írja ki hogy vesztett és kiírja a szavat amit ki kellet volna találni
+a betu-t char típusra konvertáljuk
+ha a secret\_word-ben benne van a betu akkor a shownwordNew-t alaphelyzetbe rakjuk ""
+a leirtbetuk-hez hozzáadjuk a betu-t és egy szóközt
+csinálunk egy for ciklust ami annyiszor fut ahány betűs a secret\_word
+ha a secret\_word\[i] = betu akkor a shownwordNew-hoz hozzáadja a betűt
+ha nem akkor a shownwordNew-hoz hozzáadja a shownword\[i]-t ami ha már egyszer eltalálta akkor azt is hozzáadja így nem csak \_-et
+a shownword-öt újra definiáljuk ezzel az új karakterekkel
+a console-t kitöröljük Console.Clear
+kiírjuk mennyi élete maradt és az aktuális állapotot hogy mit talált ki
+ha nem találta el a betűt akkor elvesz egy életet
+előtte megnézi hogy számot akar-e begépelni
+ha számot ír be kiírja hogy számot nem adhatsz meg és hozzáadja a leirtbetuk-hez
+kiírja az aktuális állapotot hogy mennyire találták ki a titkos szót
+ha a shownword megegyezik a secret\_word-del akkor kitalálta és kiírja neki
+ha a próbálkozásai elfogytak akkor kiírja hogy vesztett és kiírja a szót amit ki kellett volna találni
+Főmenü és beállítások
+főmenüben 3 opció van Játék Kezdése Beállítások Kilépés
+Beállítások menüben 3 opció van Betű szín Háttér szín Vissza a főmenübe
+Betű szín kiválasztásakor lehet Fehér Sárga vagy Piros
+Háttér szín kiválasztásakor lehet Fekete Kék vagy Zöld
+nem megfelelő opció esetén kiírja hogy nincs ilyen opció
+Vissza a főmenübe opcióval kilép a beállítások menüből
+Kilépés menüben megkérdezi hogy biztos-e a kilépés i vagy h
+h betű esetén visszadob a főmenübe i betű esetén kilép a programból
+Egyéb
+minden fontos lépés előtt Console.Clear
+játék végén nyerés vagy veszteség után visszadob a főmenübe és várja hogy a felhasználó ENTER-t nyomjon
